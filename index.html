@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js – The HTML Presentation Framework</title>
+		<title>Your App Is Alive</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Health Checks In Kubernetes">
+		<meta name="author" content="Michelle Noorali">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -41,38 +41,43 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
+					<h1>Your App Is Alive</h1>
+					<h3>Health Checks In Kubernetes</h3>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<small>Created by Michelle Noorali</small>
+						<small>@michellenoorali</small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
+					<h2>What?</h2>
 				</section>
 
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
+						<h2>A health check is ... </h2>
+						<p>a way to monitor your app's health</p>
 						<br>
 						<a href="#" class="navigate-down">
 							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
 						</a>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<h2>Is your app ...</h2>
+						<p>responsive?</p>
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
+						<h2>Is your app ...</h2>
+						<p>performant?</p>
+						<br>
+						<a href="#/2">
+							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
+						</a>
+					</section>
+					<section>
+						<h2>Is your app ...</h2>
+						<p>stable?</p>
 						<br>
 						<a href="#/2">
 							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
@@ -81,14 +86,11 @@
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
+					<h2>What does it look like?</h2>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
+					<h2>In general</h2>
 					<p>
 						Press <strong>ESC</strong> to enter the slide overview.
 					</p>
@@ -98,10 +100,135 @@
 				</section>
 
 				<section>
-					<h2>Touch Optimized</h2>
+					<h2>In Kubernetes Land... </h2>
+				</section>
+
+				<section>
+					<h2>Introducing Puffy</h2>
 					<p>
 						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
 					</p>
+				</section>
+
+				<section>
+					<h2>Share Puffy with the world!</h2>
+          <ul>
+            <li> Write a manfiest (Kubernetes definition in a yaml file) </li>
+            <li> Reference Docker image in Manifest </li>
+            <li> Use Kubectl (cli tool) to manage/inspect cluster </li>
+            <li> Prerequisites </li>
+            <ul>
+              <li>Running Kubernetes Cluster on Google Container Engine (GCE)</li>
+              <li>Docker image of app stored on DockerHub</li>
+              <ul>
+                <li>DockerHub = image registry = place to store images</li>
+                <li>Other image registries: Quay.io & Google Container Registry (GCR)</li>
+              </ul>
+            </ul>
+          </ul>
+				</section>
+
+				<section>
+					<h2>Puffy Repo</h2>
+				</section>
+
+				<section>
+					<h2>Dockerfile</h2>
+				</section>
+
+				<section>
+					<h2>Makefile</h2>
+				</section>
+
+				<section>
+					<h2>Pod Manifest File</h2>
+				</section>
+
+				<section>
+					<h2>Demo</h2>
+				</section>
+
+				<section>
+					<h2>Puffy is Alive</h2>
+				</section>
+
+				<section>
+					<h2>Let's make sure Puffy is OK.</h2>
+				</section>
+
+				<section>
+					<h2>Two Probes walk into a coffeeshop...</h2>
+				</section>
+
+				<section>
+					<h2>Wait. What is this probe thing?</h2>
+				</section>
+
+				<section>
+					<h2>Back to the probes...</h2>
+				</section>
+
+				<section>
+					<h2>Define a Liveness Probe in the Pod Manifest</h2>
+				</section>
+
+				<section>
+					<h2>Apply the changes in the Pod Manifest to the cluster</h2>
+				</section>
+
+				<section>
+					<h2>FAIL</h2>
+				</section>
+
+				<section>
+					<h2>Oops</h2>
+				</section>
+
+				<section>
+					<h2>Add /healthz </h2>
+				</section>
+
+				<section>
+					<h2>Bring Puffy Back!</h2>
+				</section>
+
+				<section>
+					<h2>Now for something more interesting...</h2>
+          <p> More complex set up. App with data store that also calls to an external service.</p>
+				</section>
+
+				<section>
+					<h2>Puffy's Career Change</h2>
+          <p> Breaking news! Puffy has joined a boy band called Many Directions.</p>
+				</section>
+
+				<section>
+					<h2>Puffy's world.</h2>
+          <ul>
+            <li>Puffy is a go web app</li>
+            <li>Relies on seatgeek for information on where One Direction (the competition) is performing</li>
+            <li>On startup, Puffy pulls in all of One Direction's latest album songs to perform</li>
+          </ul>
+				</section>
+
+				<section>
+					<h2>Many Directions Repo</h2>
+				</section>
+
+        <section>
+          <h2>Manifests with a Readiness Probe</h2>
+        </section>
+
+        <section>
+          <h2>Demo Many Directions</h2>
+        </section>
+
+        <section>
+          <h2></h2>
+        </section>
+
+				<section>
+					<h2>Summary!</h2>
 				</section>
 
 				<section data-markdown>
